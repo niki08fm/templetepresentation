@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AJ Power Solutions — Electrical Contractors, Hyderabad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0a1c26;--night2:#0e2531;--deep:#061319;--ink:#0f1c24;
+--vio:#16a34a;--blue:#22c55e;--cyan:#2fa9d6;--gold:#2fa9d6;--gold2:#7fdcf2;
+--txt:#eef2fa;--dim:#9aa6c0;--dim2:#66738f;--grey:#5e6980;--hair:#e7eaf1;--cream:#f7f8fb;--maxw:1150px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:#fff;color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;overflow-x:hidden}
+h1,h2,h3{font-weight:800;line-height:1.06;letter-spacing:-.034em}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:linear-gradient(90deg,#22c55e,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.95rem;padding:14px 27px;border-radius:980px;cursor:pointer;border:0;transition:.22s}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#1877a3);color:#03242f;box-shadow:0 10px 30px -12px rgba(47,169,214,.7)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-grad{background:linear-gradient(120deg,var(--blue),var(--vio));color:#fff;box-shadow:0 12px 30px -12px rgba(22,163,74,.65)}
+.btn-grad:hover{transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.26)}
+.btn-ghost:hover{border-color:var(--gold)}
+
+header{position:sticky;top:0;z-index:60;background:rgba(5,18,24,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:var(--maxw);margin:0 auto;padding:0 24px;gap:16px}
+.logo{display:flex;align-items:center;gap:11px;color:#fff}
+.logo img{height:44px;width:auto;display:block;background:#fff;border-radius:8px;padding:4px 8px}
+.logo .fb{display:none;align-items:center;gap:10px}
+.logo.nofile img{display:none}
+.logo.nofile .fb{display:flex}
+.logo .lk b{font-weight:800;font-size:1rem;display:block;line-height:1}
+.logo .lk small{font-size:.55rem;letter-spacing:.18em;color:var(--dim2);font-weight:700}
+.navlinks{display:flex;gap:4px;align-items:center}
+.navlinks a{font-weight:600;font-size:.9rem;color:#c6cede;padding:8px 14px;border-radius:980px;transition:.18s}
+.navlinks a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.navlinks .cta{background:linear-gradient(135deg,var(--gold),#1877a3);color:#03242f;margin-left:6px;font-weight:700}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:22px;height:2px;background:#fff}
+
+/* HERO: photo slider + waves + skyline */
+.hero{position:relative;color:#fff;text-align:center;overflow:hidden;background:var(--night)}
+.slides{position:absolute;inset:0}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease}
+.slides img.on{opacity:1}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,18,24,.82),rgba(5,18,24,.66) 55%,var(--night) 96%)}
+.hero .inner{position:relative;padding:110px 24px 0}
+.hero .badge{display:inline-block;padding:7px 16px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:980px;margin-bottom:26px;font-weight:700;font-size:.8rem;color:var(--gold2)}
+.hero h1{font-size:clamp(2.4rem,6.2vw,4.5rem);max-width:17ch;margin:0 auto;color:#fff}
+.hero h1 .g{background:linear-gradient(120deg,var(--blue),var(--vio),var(--cyan));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:hue 6s linear infinite}
+@keyframes hue{0%{background-position:0 0}100%{background-position:200% 0}}
+.hero p{font-size:1.12rem;color:#c9d2e6;max-width:52ch;margin:22px auto 0;font-weight:500}
+.hero .acts{display:flex;gap:12px;justify-content:center;margin-top:32px;flex-wrap:wrap}
+/* waves over skyline */
+.hero .fx{position:relative;margin-top:64px;height:210px}
+.hero .waves{position:absolute;left:50%;transform:translateX(-50%);bottom:70px;width:1700px;height:120px;opacity:.9}
+.w{fill:none;stroke-width:2.2;stroke-linecap:round}
+.w1{stroke:url(#g1);animation:wm 8s linear infinite}
+.w2{stroke:url(#g2);opacity:.45;animation:wm 12s linear infinite reverse}
+@keyframes wm{0%{transform:translateX(0)}100%{transform:translateX(-200px)}}
+.sky{position:absolute;bottom:0;left:0;right:0;line-height:0}
+.bld{fill:var(--deep)}
+.win{fill:var(--gold);opacity:0;animation:lit 4s infinite}
+@keyframes lit{0%,18%{opacity:0}28%,80%{opacity:.95}90%,100%{opacity:0}}
+
+/* stat strip */
+.statstrip{background:var(--deep);color:#fff;border-top:1px solid rgba(47,169,214,.22)}
+.statstrip .row{display:grid;grid-template-columns:repeat(4,1fr);max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.statstrip .s{padding:38px 26px;border-right:1px solid rgba(255,255,255,.07)}
+.statstrip .s:last-child{border-right:0}
+.statstrip .n{font-size:2.4rem;font-weight:800;font-variant-numeric:tabular-nums}
+.statstrip .n .u{background:linear-gradient(120deg,var(--gold),#22c55e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.statstrip .l{color:var(--dim2);font-size:.9rem;margin-top:6px;font-weight:600}
+
+.sec{padding:104px 0}
+.sec.cream{background:var(--cream)}
+.sec.night{background:var(--night);color:#fff}
+.head{max-width:660px}
+.head.ctr{margin:0 auto;text-align:center}
+.head h2{font-size:clamp(1.9rem,4.2vw,3rem);margin-top:14px}
+.sec.night .head h2{color:#fff}
+.head p{color:var(--grey);font-size:1.08rem;margin-top:15px;font-weight:500}
+.sec.night .head p{color:var(--dim)}
+
+/* photo service cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:54px}
+.card{background:#fff;border:1px solid var(--hair);border-radius:20px;overflow:hidden;transition:.28s;position:relative}
+.card:hover{transform:translateY(-5px);box-shadow:0 28px 58px -32px rgba(5,18,24,.35)}
+.card .ph{height:170px;background:linear-gradient(135deg,var(--night2),var(--night));position:relative;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.card:hover .ph img{transform:scale(1.06)}
+.card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,18,24,.55))}
+.card .ph .no{position:absolute;left:16px;bottom:12px;z-index:2;font-weight:800;font-size:.74rem;letter-spacing:.12em;color:var(--gold2)}
+.card .bd{padding:24px 24px 28px}
+.card h3{font-size:1.2rem}
+.card p{color:var(--grey);font-size:.94rem;margin-top:8px;font-weight:500}
+.card .bar{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--vio),var(--cyan));opacity:0;transition:.28s;z-index:3}
+.card:hover .bar{opacity:1}
+
+/* about: photo + night panel */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.photoFrame{border-radius:24px;overflow:hidden;position:relative;min-height:380px;background:var(--night2)}
+.photoFrame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photoFrame .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 24px;background:linear-gradient(180deg,transparent,rgba(3,14,19,.9));color:#fff;font-weight:700;font-size:.95rem}
+.checks{list-style:none;margin-top:24px;display:grid;gap:13px}
+.checks li{display:flex;gap:12px;font-weight:600;font-size:1rem}
+.checks li::before{content:"◆";color:var(--vio);font-size:.7rem;line-height:1.9}
+.sec.night .checks li{color:#dfe5f2}
+.sec.night .checks li::before{color:var(--gold)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags span{font-size:.75rem;font-weight:700;border:1px solid rgba(47,169,214,.4);color:var(--gold2);padding:5px 12px;border-radius:980px}
+
+/* gallery band */
+.gband{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:54px}
+.gband .g{border-radius:16px;overflow:hidden;height:190px;position:relative;background:var(--night2)}
+.gband .g img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.gband .g:hover img{transform:scale(1.07)}
+.gband .g::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(3,14,19,.6))}
+
+/* CTA */
+.cta-band{padding:104px 0}
+.cta-band .box{border-radius:30px;background:radial-gradient(800px 400px at 50% -20%,#14384a,var(--night) 70%);padding:78px 44px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.cta-band .glowline{position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);background-size:50% 100%;background-repeat:no-repeat;animation:slide 4s linear infinite}
+@keyframes slide{0%{background-position:-50% 0}100%{background-position:150% 0}}
+.cta-band h2{color:#fff;font-size:clamp(1.9rem,4.2vw,2.9rem)}
+.cta-band h2 .g{background:linear-gradient(120deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.cta-band p{color:var(--dim);margin:15px auto 0;max-width:46ch;font-weight:500}
+.cta-band .acts{margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+.contact .split{align-items:start}
+.cinfo{display:grid}
+.cinfo .row{display:flex;gap:15px;padding:17px 0;border-bottom:1px solid var(--hair);align-items:flex-start}
+.cinfo .ic{width:40px;height:40px;border-radius:11px;background:var(--cream);display:grid;place-items:center;flex:none}
+.cinfo b{display:block;font-size:.74rem;color:#98a1b5;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.cinfo .v{font-size:.98rem;font-weight:600}
+.cinfo a:hover{color:var(--blue)}
+form{background:#fff;border:1px solid var(--hair);border-radius:24px;padding:34px;display:grid;gap:15px;box-shadow:0 30px 66px -46px rgba(5,18,24,.4)}
+form label{font-size:.82rem;font-weight:700;display:block;margin-bottom:7px}
+form input,form textarea{width:100%;padding:13px 15px;border:1px solid var(--hair);background:var(--cream);font-family:inherit;font-size:.95rem;border-radius:12px;transition:.18s}
+form input:focus,form textarea:focus{outline:none;border-color:var(--vio);background:#fff;box-shadow:0 0 0 4px rgba(22,163,74,.12)}
+
+footer{background:var(--deep);color:var(--dim);padding:62px 0 30px}
+.fgrid{display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:40px}
+footer h4{font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dim2);margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a{font-size:.93rem;font-weight:600}
+footer ul a:hover{color:var(--gold)}
+.fsoc{display:flex;gap:9px;margin-top:18px}
+.fsoc a{width:37px;height:37px;border-radius:50%;border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;font-size:.75rem;font-weight:700;color:#c6cede}
+.fsoc a:hover{background:var(--gold);color:#03242f;border-color:var(--gold)}
+.copy{margin-top:46px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;color:var(--dim2)}
+
+
+/* clients marquee */
+.clients{padding:84px 0 90px;background:#fff;border-top:1px solid var(--hair)}
+.clients .head{margin-bottom:44px}
+.marq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marq .track{display:flex;gap:18px;width:max-content;animation:scrollX 36s linear infinite}
+.marq:hover .track{animation-play-state:paused}
+@keyframes scrollX{to{transform:translateX(-50%)}}
+.cl{flex:none;width:190px;background:#fff;border:1px solid var(--hair);border-radius:16px;padding:20px 18px;text-align:center;transition:.22s}
+.cl:hover{border-color:#2fa9d6;box-shadow:0 14px 34px -22px rgba(6,19,25,.4);transform:translateY(-3px)}
+.cl img{height:46px;max-width:140px;object-fit:contain;display:block;margin:0 auto}
+.cl b{display:block;font-size:.86rem;margin-top:12px;letter-spacing:-.01em}
+.cl small{color:var(--grey2);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+
+.rv{opacity:0;transform:translateY(16px);transition:.7s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr;gap:38px}.statstrip .row,.gband{grid-template-columns:1fr 1fr}.statstrip .s:nth-child(2n){border-right:0}.fgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){
+.navlinks{position:fixed;inset:70px 0 auto 0;background:var(--night);flex-direction:column;align-items:stretch;padding:12px 18px 18px;transform:translateY(-160%);transition:.3s}
+.navlinks.open{transform:none}.navlinks a{padding:13px}.burger{display:flex}
+.cards,.statstrip .row{grid-template-columns:1fr}.gband{grid-template-columns:1fr 1fr}
+.statstrip .s{border-right:0;border-bottom:1px solid rgba(255,255,255,.07)}.sec{padding:74px 0}}
+</style>
+</head>
+<body>
+<header><nav>
+  <a class="logo" href="#top" id="brand">
+    <img src="https://ajpowersolutions.com/images/logo-01.png" alt="AJ Power Solutions" onerror="document.getElementById('brand').classList.add('nofile')">
+    <span class="fb">
+      <svg width="36" height="36" viewBox="0 0 56 56"><path d="M28 3 L49 15 L49 41 L28 53 L7 41 L7 15 Z" fill="none" stroke="#fff" stroke-width="2.2"/><path d="M30 15 L19 31 L27 31 L24 43 L37 25 L29 25 Z" fill="#2fa9d6"/></svg>
+      <span class="lk"><b>AJ Power Solutions</b><small>ELECTRICAL CONTRACTORS</small></span>
+    </span>
+  </a>
+  <div class="navlinks" id="navlinks">
+    <a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#contact">Contact</a>
+    <a class="cta btn" style="padding:10px 20px" href="#contact">Request a quote</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav></header>
+
+<section class="hero" id="top">
+  <div class="slides" aria-hidden="true">
+    <img class="on" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1600&q=80" alt="">
+    <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1600&q=80" alt="">
+    <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1600&q=80" alt="">
+  </div>
+  <div class="shade"></div>
+  <div class="inner">
+    <span class="badge rv">✦ HT &amp; LT Electrification · Hyderabad</span>
+    <h1 class="rv">Energy that flows. <span class="g">A city that glows.</span></h1>
+    <p class="rv">Complete electrical contracting for commercial, industrial, residential and IT projects across South India — from the first drawing to the final connection.</p>
+    <div class="acts rv">
+      <a class="btn btn-gold" href="#contact">Request a quote →</a>
+      <a class="btn btn-ghost" href="#services">Our services</a>
+    </div>
+  </div>
+  <div class="fx" aria-hidden="true">
+    <svg class="waves" viewBox="0 0 1700 120" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22c55e"/><stop offset=".5" stop-color="#16a34a"/><stop offset="1" stop-color="#2fa9d6"/></linearGradient>
+        <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#2fa9d6"/></linearGradient>
+      </defs>
+      <path class="w w1" d="M0 70 q50 -46 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0"/>
+      <path class="w w2" d="M0 82 q50 -30 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0"/>
+    </svg>
+    <div class="sky">
+      <svg viewBox="0 0 1440 150" preserveAspectRatio="xMidYMax slice">
+        <rect class="bld" x="0" y="90" width="90" height="60"/><rect class="bld" x="100" y="50" width="110" height="100"/>
+        <rect class="bld" x="220" y="78" width="80" height="72"/><rect class="bld" x="310" y="30" width="120" height="120"/>
+        <rect class="bld" x="440" y="70" width="95" height="80"/><rect class="bld" x="545" y="16" width="130" height="134"/>
+        <rect class="bld" x="685" y="58" width="90" height="92"/><rect class="bld" x="785" y="38" width="115" height="112"/>
+        <rect class="bld" x="910" y="76" width="85" height="74"/><rect class="bld" x="1005" y="24" width="125" height="126"/>
+        <rect class="bld" x="1140" y="64" width="95" height="86"/><rect class="bld" x="1245" y="44" width="110" height="106"/>
+        <rect class="bld" x="1365" y="84" width="75" height="66"/>
+        <rect class="win" x="120" y="66" width="9" height="11" style="animation-delay:.2s"/><rect class="win" x="150" y="66" width="9" height="11" style="animation-delay:1.2s"/>
+        <rect class="win" x="335" y="48" width="10" height="12" style="animation-delay:1.6s"/><rect class="win" x="365" y="48" width="10" height="12" style="animation-delay:.4s"/>
+        <rect class="win" x="335" y="86" width="10" height="12" style="animation-delay:2.6s"/><rect class="win" x="570" y="34" width="11" height="13" style="animation-delay:.9s"/>
+        <rect class="win" x="602" y="34" width="11" height="13" style="animation-delay:2.3s"/><rect class="win" x="570" y="80" width="11" height="13" style="animation-delay:.1s"/>
+        <rect class="win" x="805" y="56" width="10" height="12" style="animation-delay:2s"/><rect class="win" x="838" y="56" width="10" height="12" style="animation-delay:.5s"/>
+        <rect class="win" x="1028" y="42" width="11" height="13" style="animation-delay:.6s"/><rect class="win" x="1062" y="42" width="11" height="13" style="animation-delay:2.5s"/>
+        <rect class="win" x="1028" y="94" width="11" height="13" style="animation-delay:3.5s"/><rect class="win" x="1268" y="62" width="10" height="12" style="animation-delay:1.9s"/>
+        <rect class="win" x="1300" y="62" width="10" height="12" style="animation-delay:.8s"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="statstrip">
+  <div class="row">
+    <div class="s rv"><div class="n"><span class="cnt" data-to="24">0</span><span class="u">/7</span></div><div class="l">Service department, always on</div></div>
+    <div class="s rv"><div class="n">HT<span class="u">·LT</span></div><div class="l">Both tensions covered</div></div>
+    <div class="s rv"><div class="n"><span class="cnt" data-to="4">0</span><span class="u">+</span></div><div class="l">Sectors lit up</div></div>
+    <div class="s rv"><div class="n"><span class="cnt" data-to="100">0</span><span class="u">%</span></div><div class="l">Customer-satisfaction focus</div></div>
+  </div>
+</div>
+
+
+<!-- Trusted-by client marquee (logos from the client's Tech PI site — swap to local files for production) -->
+<section class="clients">
+  <div class="wrap"><div class="head ctr rv"><span class="eyebrow">Trusted by industry leaders</span><h2>Delivering excellence nationwide.</h2></div></div>
+  <div class="marq rv"><div class="track"><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/amd.png" alt="AMD" loading="lazy" onerror="this.style.display='none'"><b>AMD</b><small>Semiconductor</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/qualcomm.png" alt="Qualcomm" loading="lazy" onerror="this.style.display='none'"><b>Qualcomm</b><small>Semiconductor</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/bank.jpg" alt="Bank of America" loading="lazy" onerror="this.style.display='none'"><b>Bank of America</b><small>Banking</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/gs.png" alt="Goldman Sachs" loading="lazy" onerror="this.style.display='none'"><b>Goldman Sachs</b><small>Finance</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/hcl.png" alt="HCL" loading="lazy" onerror="this.style.display='none'"><b>HCL</b><small>Technology</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/isb.jpg" alt="ISB" loading="lazy" onerror="this.style.display='none'"><b>ISB</b><small>Education</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/hyundai.png" alt="Hyundai" loading="lazy" onerror="this.style.display='none'"><b>Hyundai</b><small>Automobile</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/jsw.jpg" alt="JSW" loading="lazy" onerror="this.style.display='none'"><b>JSW</b><small>Steel</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/micron.png" alt="Micron Technology" loading="lazy" onerror="this.style.display='none'"><b>Micron Technology</b><small>Semiconductor</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/h-r-block.png" alt="H & R Block" loading="lazy" onerror="this.style.display='none'"><b>H & R Block</b><small>Finance</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/DuPont.png" alt="DuPont" loading="lazy" onerror="this.style.display='none'"><b>DuPont</b><small>Chemical</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/NCR.png" alt="NCR Corporation" loading="lazy" onerror="this.style.display='none'"><b>NCR Corporation</b><small>Technology</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/amd.png" alt="AMD" loading="lazy" onerror="this.style.display='none'"><b>AMD</b><small>Semiconductor</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/qualcomm.png" alt="Qualcomm" loading="lazy" onerror="this.style.display='none'"><b>Qualcomm</b><small>Semiconductor</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/bank.jpg" alt="Bank of America" loading="lazy" onerror="this.style.display='none'"><b>Bank of America</b><small>Banking</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/gs.png" alt="Goldman Sachs" loading="lazy" onerror="this.style.display='none'"><b>Goldman Sachs</b><small>Finance</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/hcl.png" alt="HCL" loading="lazy" onerror="this.style.display='none'"><b>HCL</b><small>Technology</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/isb.jpg" alt="ISB" loading="lazy" onerror="this.style.display='none'"><b>ISB</b><small>Education</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/hyundai.png" alt="Hyundai" loading="lazy" onerror="this.style.display='none'"><b>Hyundai</b><small>Automobile</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/jsw.jpg" alt="JSW" loading="lazy" onerror="this.style.display='none'"><b>JSW</b><small>Steel</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/micron.png" alt="Micron Technology" loading="lazy" onerror="this.style.display='none'"><b>Micron Technology</b><small>Semiconductor</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/h-r-block.png" alt="H & R Block" loading="lazy" onerror="this.style.display='none'"><b>H & R Block</b><small>Finance</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/DuPont.png" alt="DuPont" loading="lazy" onerror="this.style.display='none'"><b>DuPont</b><small>Chemical</small></div><div class="cl"><img src="https://tech-pi-website.vercel.app/images/customers/NCR.png" alt="NCR Corporation" loading="lazy" onerror="this.style.display='none'"><b>NCR Corporation</b><small>Technology</small></div></div></div>
+</section>
+
+<section class="sec" id="services"><div class="wrap">
+  <div class="head ctr rv"><span class="eyebrow">Services</span><h2>Everything electrical, under one team.</h2><p>Specialised HT &amp; LT contractors across commercial, industrial, residential and IT sectors.</p></div>
+  <div class="cards">
+    <div class="card rv"><span class="bar"></span><div class="ph"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy"><span class="no">SERVICE · 01</span></div><div class="bd"><h3>Design &amp; Engineering</h3><p>Site-specific design, load planning and compliance documentation.</p></div></div>
+    <div class="card rv"><span class="bar"></span><div class="ph"><img src="https://tech-pi-website.vercel.app/images/Low-voltage.jpg" alt="" loading="lazy"><span class="no">SERVICE · 02</span></div><div class="bd"><h3>HT &amp; LT Works</h3><p>High- and low-tension panels, distribution and electrification at any scale.</p></div></div>
+    <div class="card rv"><span class="bar"></span><div class="ph"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy"><span class="no">SERVICE · 03</span></div><div class="bd"><h3>Internal Electrification</h3><p>Complete internal wiring executed cleanly to standard.</p></div></div>
+    <div class="card rv"><span class="bar"></span><div class="ph"><img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy"><span class="no">SERVICE · 04</span></div><div class="bd"><h3>Lighting Management</h3><p>Lighting systems designed for efficiency and control.</p></div></div>
+    <div class="card rv"><span class="bar"></span><div class="ph"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy"><span class="no">SERVICE · 05</span></div><div class="bd"><h3>Testing &amp; Commissioning</h3><p>Testing, commissioning and CEIG / Board liaisoning end to end.</p></div></div>
+    <div class="card rv"><span class="bar"></span><div class="ph"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy"><span class="no">SERVICE · 06</span></div><div class="bd"><h3>Maintenance &amp; Service</h3><p>Preventive maintenance backed by a 24-hour service department.</p></div></div>
+  </div>
+</div></section>
+
+<section class="sec cream" id="gallery" style="padding-top:0"><div class="wrap">
+  <div class="head ctr rv" style="padding-top:80px"><span class="eyebrow">Our work</span><h2>Projects in pictures.</h2></div>
+  <div class="gband">
+    <div class="g rv"><img src="https://tech-pi-website.vercel.app/images/ct1%20(1).jpg" alt="" loading="lazy"></div>
+    <div class="g rv"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy"></div>
+    <div class="g rv"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy"></div>
+    <div class="g rv"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy"></div>
+  </div>
+</div></section>
+
+<section class="sec night" id="about"><div class="wrap"><div class="split">
+  <div class="photoFrame rv">
+    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80" alt="Our strength" loading="lazy">
+    <div class="cap">People are our strength — the philosophy we were founded on.</div>
+  </div>
+  <div class="rv">
+    <span class="eyebrow" style="background:none;-webkit-text-fill-color:var(--gold);color:var(--gold)">About the company</span>
+    <h2 style="margin-top:14px">Built on people, measured by trust.</h2>
+    <p style="color:var(--dim);margin-top:14px;font-weight:500">AJ Power Solutions is among the reputed, fast-growing electrical contractors in South India — equipped for the challenges and complexities of any job. "Our projects can be complex — but our ethics are not."</p>
+    <ul class="checks">
+      <li>One accountable team from pre-construction to maintenance</li>
+      <li>Quality procurement from leading brands</li>
+      <li>Safety, integrity and dependability on every site</li>
+    </ul>
+    <div class="tags"><span>Integrity</span><span>Honesty</span><span>Perseverance</span><span>Respect</span><span>Service</span></div>
+  </div>
+</div></div></section>
+
+<section class="cta-band"><div class="wrap">
+  <div class="box rv">
+    <div class="glowline"></div>
+    <h2>Your project deserves to <span class="g">shine.</span></h2>
+    <p>Tell us what you're building and a specialist will come back with a clear, cost-effective plan.</p>
+    <div class="acts"><a class="btn btn-gold" href="#contact">Request a quote →</a><a class="btn btn-ghost" href="tel:+918197496989">Call +91 81974 96989</a></div>
+  </div>
+</div></section>
+
+<section class="sec contact" id="contact" style="padding-top:0"><div class="wrap"><div class="split">
+  <div class="rv">
+    <span class="eyebrow">Contact</span>
+    <h2 style="margin-top:14px">Let's get started.</h2>
+    <p style="color:var(--grey);margin:14px 0 26px;font-weight:500">Share your requirement and we'll get back to you as soon as possible.</p>
+    <div class="cinfo">
+      <div class="row"><div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 1114 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><b>Address</b><span class="v">#225, Doyens Township, Serilingampally, Hyderabad, Telangana 500019</span></div></div>
+      <div class="row"><div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.5-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg></div><div><b>Phone</b><span class="v"><a href="tel:+918197496989">+91 81974 96989</a> · <a href="tel:+917032901979">+91 70329 01979</a></span></div></div>
+      <div class="row"><div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><b>Email</b><span class="v"><a href="mailto:hyd@ajpowersolutions.com">hyd@ajpowersolutions.com</a></span></div></div>
+    </div>
+  </div>
+  <form class="rv" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you — we will get back to you shortly';">
+    <div><label>Name</label><input type="text" placeholder="Your full name" required></div>
+    <div><label>Phone</label><input type="tel" placeholder="Your phone number" required></div>
+    <div><label>Email</label><input type="email" placeholder="you@example.com"></div>
+    <div><label>Project details</label><textarea rows="3" placeholder="Tell us about your project"></textarea></div>
+    <button class="btn btn-grad" type="submit">Send request →</button>
+  </form>
+</div></div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <span class="logo"><svg width="34" height="34" viewBox="0 0 56 56"><path d="M28 3 L49 15 L49 41 L28 53 L7 41 L7 15 Z" fill="none" stroke="#fff" stroke-width="2.2"/><path d="M30 15 L19 31 L27 31 L24 43 L37 25 L29 25 Z" fill="#2fa9d6"/></svg>
+      <span class="lk"><b style="color:#fff">AJ Power Solutions</b><small>ELECTRICAL CONTRACTORS</small></span></span>
+      <p style="margin-top:14px;font-size:.93rem;max-width:300px;font-weight:500">Complete electrical contracting across South India.</p>
+      <div class="fsoc">
+        <a href="https://www.facebook.com/ajpowersolutions/" target="_blank" rel="noopener">f</a>
+        <a href="https://twitter.com/solutions_aj" target="_blank" rel="noopener">X</a>
+        <a href="https://www.instagram.com/aj_power_solutions/" target="_blank" rel="noopener">ig</a>
+        <a href="https://www.linkedin.com/in/aj-power-solutions-a887b316b/" target="_blank" rel="noopener">in</a>
+      </div>
+    </div>
+    <div><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div><h4>Get in touch</h4><ul><li><a href="tel:+918197496989">+91 81974 96989</a></li><li><a href="mailto:hyd@ajpowersolutions.com">hyd@ajpowersolutions.com</a></li></ul></div>
+  </div>
+  <div class="copy"><span>© 2018–2026 AJ Power Solutions. All rights reserved.</span><span>Hyderabad · South India</span></div>
+</div></footer>
+
+<script>
+const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+burger.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(Math.min(i%6,5)*0.05)+'s';io.observe(el);});
+const cio=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,to=+el.dataset.to,t0=performance.now();
+const t=n=>{const p=Math.min((n-t0)/1100,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(t)};requestAnimationFrame(t);cio.unobserve(el)})},{threshold:.6});
+document.querySelectorAll('.cnt').forEach(el=>cio.observe(el));
+// hero slider
+const slides=document.querySelectorAll('.slides img');let si=0;
+setInterval(()=>{slides[si].classList.remove('on');si=(si+1)%slides.length;slides[si].classList.add('on');},4500);
+</script>
+</body>
+</html>
